@@ -1,0 +1,149 @@
+/* Tokens da marca CDL Saúde (azul do painel web) e base da página. */
+:root {
+  --brand: #16376c;
+  --brand-strong: #0f2850;
+  --brand-accent: #03428e;
+  --brand-soft: #e8eef8;
+
+  --bg: #f3f5f9;
+  --surface: #ffffff;
+  --surface-2: #f7f8fb;
+  --text: #1b2333;
+  --text-muted: #5f6b80;
+  --border: #e1e5ec;
+  --focus: #3b74d4;
+
+  --success: #13795b;
+  --success-soft: #e3f4ec;
+  --warning: #9a6200;
+  --warning-soft: #fff3d9;
+  --danger: #c0352b;
+  --danger-soft: #fdeceb;
+  --info: #1f5fae;
+  --info-soft: #e7f0fb;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 2px 8px rgb(16 24 40 / 0.04);
+
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tema escuro: segue o sistema por padrão (data-theme ausente ou "system");
+   o usuário pode fixar claro ou escuro, gravado em data-theme no <html>. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --brand: #4f7fd0;
+    --brand-strong: #6b95dc;
+    --brand-accent: #4f7fd0;
+    --brand-soft: #1c2a44;
+
+    --bg: #0e131c;
+    --surface: #161d29;
+    --surface-2: #1b2331;
+    --text: #e6eaf2;
+    --text-muted: #9aa5b8;
+    --border: #2a3344;
+    --focus: #7aa2e8;
+
+    --success: #4cc79b;
+    --success-soft: #11312a;
+    --warning: #f0b54a;
+    --warning-soft: #33280f;
+    --danger: #f07a70;
+    --danger-soft: #3a1a18;
+    --info: #7aa8ec;
+    --info-soft: #182841;
+
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --brand: #4f7fd0;
+  --brand-strong: #6b95dc;
+  --brand-accent: #4f7fd0;
+  --brand-soft: #1c2a44;
+
+  --bg: #0e131c;
+  --surface: #161d29;
+  --surface-2: #1b2331;
+  --text: #e6eaf2;
+  --text-muted: #9aa5b8;
+  --border: #2a3344;
+  --focus: #7aa2e8;
+
+  --success: #4cc79b;
+  --success-soft: #11312a;
+  --warning: #f0b54a;
+  --warning-soft: #33280f;
+  --danger: #f07a70;
+  --danger-soft: #3a1a18;
+  --info: #7aa8ec;
+  --info-soft: #182841;
+
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-width: 320px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+a {
+  color: var(--brand-accent);
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
